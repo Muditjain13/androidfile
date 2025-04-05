@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // ✅ Set up pulse animation
-        ImageView pulse1 = findViewById(R.id.pulse1);
-        Animation pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulse_amimation);
-        pulse1.startAnimation(pulseAnimation);
+
 
         // ✅ Handle dynamic message input for NFC
         EditText messageBox = findViewById(R.id.messageBox);
