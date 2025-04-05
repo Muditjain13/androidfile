@@ -11,6 +11,12 @@
         android:text="Enter Message to Send Over NFC"
         android:textSize="18sp"
         android:layout_marginBottom="16dp" />
+    <ImageView
+        android:id="@+id/pulse1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/pulse_image" />
 
     <EditText
         android:id="@+id/messageBox"

@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ✅ Pulse animation (keep this part)
+        // ✅ Set up pulse animation
         ImageView pulse1 = findViewById(R.id.pulse1);
         Animation pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulse_amimation);
         pulse1.startAnimation(pulseAnimation);
 
-        // ✅ New: Dynamic NFC message input
+        // ✅ Handle dynamic message input for NFC
         EditText messageBox = findViewById(R.id.messageBox);
         Button sendButton = findViewById(R.id.sendButton);
 

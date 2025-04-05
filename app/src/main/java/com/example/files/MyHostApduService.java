@@ -39,12 +39,13 @@ public class MyHostApduService extends HostApduService {
             return STATUS_SUCCESS;
         }
 
-        // Respond with the current message + success status
-        byte[] messageBytes = dynamicMessage.getBytes(StandardCharsets.UTF_8);
+        // Respond with the trimmed message + status
+        byte[] messageBytes = dynamicMessage.trim().getBytes(StandardCharsets.UTF_8); // ✅ FIXED
         byte[] response = concatenate(messageBytes, STATUS_SUCCESS);
         Log.d(TAG, "Sending message: " + dynamicMessage);
         return response;
     }
+
 
     @Override
     public void onDeactivated(int reason) {
